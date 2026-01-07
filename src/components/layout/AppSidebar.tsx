@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState,useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "@/context/SidebarContext";
 import {
   BoxCubeIcon,
   CalenderIcon,
@@ -16,8 +16,7 @@ import {
   PlugInIcon,
   TableIcon,
   UserCircleIcon,
-} from "../icons/index";
-import SidebarWidget from "./SidebarWidget";
+} from "@/assets/icons";
 
 type NavItem = {
   name: string;
@@ -46,18 +45,17 @@ const navItems: NavItem[] = [
   {
     name: "Forms",
     icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    subItems: [{ name: "Form Elements", path: "/forms/elements", pro: false }],
   },
   {
     name: "Tables",
     icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+    subItems: [{ name: "Basic Tables", path: "/tables/basic", pro: false }],
   },
   {
     name: "Pages",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
       { name: "404 Error", path: "/error-404", pro: false },
     ],
   },
@@ -68,20 +66,21 @@ const othersItems: NavItem[] = [
     icon: <PieChartIcon />,
     name: "Charts",
     subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false },
+      { name: "Line Chart", path: "/charts/line", pro: false },
+      { name: "Bar Chart", path: "/charts/bar", pro: false },
     ],
   },
   {
     icon: <BoxCubeIcon />,
     name: "UI Elements",
     subItems: [
-      { name: "Alerts", path: "/alerts", pro: false },
-      { name: "Avatar", path: "/avatars", pro: false },
-      { name: "Badge", path: "/badge", pro: false },
-      { name: "Buttons", path: "/buttons", pro: false },
-      { name: "Images", path: "/images", pro: false },
-      { name: "Videos", path: "/videos", pro: false },
+      { name: "Alerts", path: "/ui/alerts", pro: false },
+      { name: "Avatar", path: "/ui/avatars", pro: false },
+      { name: "Badge", path: "/ui/badge", pro: false },
+      { name: "Buttons", path: "/ui/buttons", pro: false },
+      { name: "Images", path: "/ui/images", pro: false },
+      { name: "Videos", path: "/ui/videos", pro: false },
+      { name: "Modals", path: "/ui/modals", pro: false },
     ],
   },
   {
@@ -374,7 +373,6 @@ const AppSidebar: React.FC = () => {
             </div>
           </div>
         </nav>
-        {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null}
       </div>
     </aside>
   );
