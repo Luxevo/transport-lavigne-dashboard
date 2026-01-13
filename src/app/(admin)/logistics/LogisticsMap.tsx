@@ -9,23 +9,23 @@ import {
 } from "@/components/ui/map";
 
 const route = [
-  [-74.006, 40.7128], // NYC City Hall
-  [-73.9857, 40.7484], // Empire State Building
-  [-73.9772, 40.7527], // Grand Central
-  [-73.9654, 40.7829], // Central Park
+  [-73.5567, 45.5088], // Vieux-Montréal
+  [-73.5636, 45.5068], // Quartier des spectacles
+  [-73.5617, 45.5087], // Place des Arts
+  [-73.5852, 45.5049], // Parc du Mont-Royal
 ] as [number, number][];
 
 const stops = [
-  { name: "City Hall", lng: -74.006, lat: 40.7128 },
-  { name: "Empire State Building", lng: -73.9857, lat: 40.7484 },
-  { name: "Grand Central Terminal", lng: -73.9772, lat: 40.7527 },
-  { name: "Central Park", lng: -73.9654, lat: 40.7829 },
+  { name: "Vieux-Montréal", lng: -73.5567, lat: 45.5088 },
+  { name: "Quartier des spectacles", lng: -73.5636, lat: 45.5068 },
+  { name: "Place des Arts", lng: -73.5617, lat: 45.5087 },
+  { name: "Parc du Mont-Royal", lng: -73.5852, lat: 45.5049 },
 ];
 
 export default function LogisticsMap() {
   return (
     <div className="h-full min-h-[500px] w-full rounded-lg overflow-hidden">
-      <Map center={[-73.98, 40.75]} zoom={11.2}>
+      <Map center={[-73.5673, 45.5017]} zoom={12}>
         <MapRoute coordinates={route} color="#57162a" width={4} opacity={0.8} />
 
         {stops.map((stop, index) => (

@@ -22,16 +22,17 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         onClick={toggleDropdown} 
         className="flex items-center text-gray-700 dropdown-toggle"
       >
-        <span className="mr-3 overflow-hidden rounded-full h-11 w-11">
+        <span className="mr-3 overflow-hidden rounded-lg h-11 w-11 border border-gray-200 flex items-center justify-center bg-white">
           <Image
             width={44}
             height={44}
-            src="/images/user/owner.jpg"
-            alt="User"
+            src="/images/logo/logo.png"
+            alt="Transport Lavigne"
+            className="object-contain"
           />
         </span>
 
-        <span className="block mr-1 font-medium text-theme-sm">Musharof</span>
+        <span className="block mr-1 font-medium text-theme-sm">Transport Lavigne</span>
 
         <svg
           className={`stroke-gray-500 transition-transform duration-200 ${ isOpen ? "rotate-180" : "" }`}
@@ -58,10 +59,10 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
       >
         <div>
           <span className="block font-medium text-gray-700 text-theme-sm">
-            Musharof Chowdhury
+            Transport Lavigne
           </span>
           <span className="mt-0.5 block text-theme-xs text-gray-500">
-            randomuser@pimjo.com
+            info@transportlavigne.com
           </span>
         </div>
 

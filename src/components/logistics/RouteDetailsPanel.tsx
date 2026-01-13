@@ -18,34 +18,34 @@ interface RouteDetails {
 }
 
 const routeDetails: RouteDetails = {
-  routeName: "Trajet NYC - Manhattan",
-  distance: "18.5 km",
-  estimatedTime: "45 min",
+  routeName: "Trajet Montréal - Centre-ville",
+  distance: "8.5 km",
+  estimatedTime: "35 min",
   status: "active",
   stops: [
     {
-      name: "City Hall",
-      address: "260 Broadway, New York",
+      name: "Vieux-Montréal",
+      address: "Place Jacques-Cartier, Montréal, QC",
       status: "completed",
       time: "09:00",
     },
     {
-      name: "Empire State Building",
-      address: "350 5th Ave, New York",
+      name: "Quartier des spectacles",
+      address: "Boulevard Saint-Laurent, Montréal, QC",
       status: "completed",
+      time: "09:15",
+    },
+    {
+      name: "Place des Arts",
+      address: "175 Rue Sainte-Catherine O, Montréal, QC",
+      status: "current",
       time: "09:25",
     },
     {
-      name: "Grand Central Terminal",
-      address: "89 E 42nd St, New York",
-      status: "current",
-      time: "09:40",
-    },
-    {
-      name: "Central Park",
-      address: "Central Park, New York",
+      name: "Parc du Mont-Royal",
+      address: "1260 Chemin Remembrance, Montréal, QC",
       status: "pending",
-      time: "10:15",
+      time: "09:50",
     },
   ],
 };
