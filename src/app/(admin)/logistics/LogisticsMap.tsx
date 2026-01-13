@@ -24,7 +24,7 @@ const stops = [
 
 export default function LogisticsMap() {
   return (
-    <div className="h-[500px] w-full rounded-lg overflow-hidden">
+    <div className="h-full min-h-[500px] w-full rounded-lg overflow-hidden">
       <Map center={[-73.98, 40.75]} zoom={11.2}>
         <MapRoute coordinates={route} color="#57162a" width={4} opacity={0.8} />
 
